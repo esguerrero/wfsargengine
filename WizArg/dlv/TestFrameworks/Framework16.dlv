@@ -1,0 +1,11 @@
+% Figure
+ ar(stable).
+ ar(semistable).
+ ar(preferred).
+ ar(grounded).
+ ar(complete).
+
+ at(stable,semistable).
+ at(semistable,preferred).
+ at(preferred,complete).
+ at(grounded,complete).

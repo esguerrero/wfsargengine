@@ -1,0 +1,48 @@
+; InstallSimple project
+
+[Setup]
+WindowTitle=WFS Argument Engine v1.0R16
+ProductName=WFS Argument Engine
+
+[Graphics]
+SplashScreen=C:\home\arg-engine2\splash2.bmp
+SplashScreenDelay=2
+Header=C:\home\arg-engine2\header2.bmp
+HeaderJustify=Right
+HeaderFontColor=0
+WizardBitmap=C:\home\arg-engine2\wizz.bmp
+WizardFontColor=0
+
+[FirstMessage]
+This Argument Engine is based on Java using InterProlog [http://www.declarativa.com/interprolog/] as a middleware between our implementation and the XSB engine [http://xsb.sourceforge.net/].
+
+Please read the instructions and the agreement licences of XSB and Interprolog. Moreover, you should also read the instructions and implementation details in http://www8.cs.umu.se/~esteban/wfsArgEngine.html
+[LastMessage]
+Thank you for using our software.
+
+For details of this implementation please visit us: 
+
+User Interaction and Knowledge Modelling Research Group at the Department of Computing Science of Umeå University (Sweden). [http://www.cs.umu.se/forskning/forskargrupper/uikm/]
+
+[LicenseAgreement]
+In progress..
+
+[SetupFiles]
+SourceFolder=C:\home\arg-engine2
+SpecialFolder=Current Directory
+SetupPath=arg-engine2
+
+[Shortcuts]
+ProgramGroup=
+windowsScripts\runXSBSPlistener.bat=d
+
+[Registry]
+
+[Requirements]
+OperatingSystem=WinAll
+NetFramework=0
+NetFrameworkLink=http://www.microsoft.com/en-us/download/details.aspx?id=17718
+AdminRights=0
+
+[AfterInstalling]
+Reboot=0

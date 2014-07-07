@@ -1,0 +1,11 @@
+% Figure
+ ar(alpha).
+ ar(beta).
+ ar(gamma).
+ ar(delta).
+
+ at(alpha,beta).
+ at(beta,alpha).
+ at(gamma,delta).
+ at(alpha,gamma).
+ at(beta,gamma).

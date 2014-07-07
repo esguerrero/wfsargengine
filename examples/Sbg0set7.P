@@ -1,0 +1,3 @@
+:-auto_table. 
+p(c):-p(d),p(a).
+p(b).

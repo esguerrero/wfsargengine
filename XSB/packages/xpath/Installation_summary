@@ -1,0 +1,4 @@
+  XPath support:				  yes
+  XPath C flags:				   -I/cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/packages/xpath/cc/libxml -I/cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/packages/xpath/cc 
+  XPath loader flags:				   -L/cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/packages/xpath/cc/bin -lxml2 -lz -liconv -lm 
+

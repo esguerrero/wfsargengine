@@ -1,0 +1,13 @@
+% Figure
+ ar(a).
+ ar(b).
+ ar(c).
+ ar(d).
+
+ at(b,a).
+ at(c,b).
+ at(a,c).
+ at(d,a).
+ at(d,b).
+ at(d,c).
+

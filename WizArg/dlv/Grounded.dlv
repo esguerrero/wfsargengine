@@ -1,0 +1,40 @@
+#const fixp = 30.
+#maxint= fixp.
+
+time(0..fixp).
+
+
+% Init
+arg(X,0) :- ar(X).
+ 
+
+% Calcula grounded
+% segundo argumento es para contar las iteraciones
+% Tercero, son iteraciones globales, time
+%
+
+a_gr(X,0,T1) :- T1=T+1, ac(X,T).
+
+a_gr(X,0,T1) :- arg(X,T), T1=T+1, not not_a_gr(X,T).
+
+not_a_gr(X,T) :- arg(X,T), at(Y,X), not d(Y,T), time(T).
+
+a_gr(X,N,T):- #int(N), N >0, arg(X,T), not not_a_gr_d(X,N,T), time(T).
+
+not_a_gr_d(X,N,T) :- at(Y,X), N=M+1, not atacado(Y,M,T),arg(X,T), arg(Y,T), time(T).
+
+atacado(Y,M,T):- arg(Y,T), arg(Z,T), at(Z,Y), a_gr(Z,M,T), time(T).
+
+ac_gr(X,T) :- a_gr(X, fixp,T), time(T).
+
+d_gr(X,T) :- at(Y,X), ac_gr(Y,T), arg(Y,T), arg(X,T), time(T).
+
+i_gr(X,T):- arg(X,T), not ac_gr(X,T), not d_gr(X,T), time(T).
+
+at_d(X,Y,T) :- arg(X,T), arg(Y,T), at(X,Y), not not_at_d(X,Y,T), time(T).
+
+not_at_d(X,Y,T) :- arg(X,T), arg(Y,T), at(X,Y), d_gr(X,t), time(T).
+
+IN(X) :- ac_gr(X,T).
+OUT(X) :- d_gr(X,T).
+UNDEC(X) :- i_gr(X,T).

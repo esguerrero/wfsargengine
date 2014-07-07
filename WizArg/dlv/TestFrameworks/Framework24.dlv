@@ -1,0 +1,23 @@
+% Figure
+ ar(a1a).
+ ar(a2a).
+ ar(a3a).
+ ar(a4a).
+ ar(b1b).
+ ar(b2b).
+ ar(b3b).
+ ar(b4b).
+ 
+
+ at(a1a,a2a).
+ at(a1a,a3a).
+ at(a2a,a4a).
+ at(a3a,a4a).
+ at(b1b,b2b).
+ at(b1b,b3b).
+ at(b2b,b4b).
+ at(b3b,b4b).
+ at(a1a,b1b).
+ at(a2a,b2b).
+ at(a3a,b3b).
+ at(a4a,b4b).

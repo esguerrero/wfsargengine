@@ -1,0 +1,5 @@
+% Figure
+ar(a2).
+ar(a3).
+at(a2,a3).
+at(a3,a2).

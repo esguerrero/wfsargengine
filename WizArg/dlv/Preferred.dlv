@@ -1,0 +1,33 @@
+eq(X,Y) :- ar(X), ar(Y), X==Y.
+
+atacked(Y) :- at(X,Y).
+free(X) :- ar(X), not atacked(X).
+
+cicle(X,Y,Z) :- ar(X), ar(Y), ar(Z), ar(W), at(X,Y), at(Y,Z), at(Z,X).
+broken_cicle(X,Y,Z) :- cicle(X,Y,Z), ar(W), defended(W), at(W,X).
+broken_cicle(X,Y,Z) :- cicle(X,Y,Z), ar(W), defended(W), at(W,Y).
+broken_cicle(X,Y,Z) :- cicle(X,Y,Z), ar(W), defended(W), at(W,Z).
+
+:- d(X), free(X).
+:- d(X), defended(X).
+
+d(X) v d(Y) :- ar(X), ar(Y), at(Y,X).
+d(X) :- ar(X), ar(Y), at(Y,X), free(Y).
+d(X) :- cicle(X,Y,Z), not broken_cicle(X,Y,Z).
+
+defender(X,Z,Y) :- ar(X), ar(Y), ar(Z), at(Y,X), at(Z,Y).
+
+multi_defended(X) :- defender(X,Z,Y), defender(X,W,Y), not eq(W,Z).
+
+un_defended(X) :- ar(X), ar(Y), ar(Z), defender(X,Z,Y), d(Z).
+
+defended(X) :- ar(X), not un_defended(X).
+
+
+
+d(X) :- ar(X), ar(Z), defender(X,Z,Y), d(Z), not multi_defended(X).
+
+acc(X) :- ar(X), not d(X).
+
+IN(X) :- ar(X), acc(X).
+OUT(X) :- ar(X), not IN(X).

@@ -1,0 +1,15 @@
+% Figure
+ar(a9).
+ar(a10).
+ar(a1).
+ar(a2).
+ar(a3).
+ar(a4).
+ar(a5).
+ar(a6).
+at(a9,a4).
+at(a10,a3).
+at(a3,a10).
+at(a4,a9).
+at(a5,a6).
+at(a6,a5).

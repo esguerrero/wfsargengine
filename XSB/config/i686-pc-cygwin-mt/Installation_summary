@@ -1,0 +1,137 @@
+
+
+            INSTALLATION SUMMARY
+            --------------------
+
+XSB Version:	   3.4.0
+Code name:	   Soy mILK
+Release date:	   2013-05-01
+Configuration:	   i686-pc-cygwin
+Installation date: Thu May  2 15:19:20 EDT 2013
+
+  Build process is looking for XSB sources in:	  /cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB
+  XSB should be installed in:			  /cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB
+  Configuration-specific executables go in:	  /cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/config/i686-pc-cygwin-mt/bin
+  Configuration-specific libraries go in:	  /cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/config/i686-pc-cygwin-mt/lib
+  Object code goes in:				  /cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/config/i686-pc-cygwin-mt/saved.o
+  Site-specific code goes in:			  /cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/site
+  Site configuration-specific code goes in:	  /cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/site/config/i686-pc-cygwin
+  XSB will be built with:			  gcc -mno-cygwin  -IC:\XSBSYS\XSBENV\jdk/include  -I/cygdrive/c/XSBSYS/XSBENV/jdk/include -IC:/XSBSYS/XSBENV/jdk/include/win32 -I/cygdrive/c/XSBSYS/XSBENV/XSB/pthreads/pthreads -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+  builtin.c will be built with: 		  gcc -mno-cygwin  -IC:\XSBSYS\XSBENV\jdk/include  -I/cygdrive/c/XSBSYS/XSBENV/jdk/include -IC:/XSBSYS/XSBENV/jdk/include/win32 -I/cygdrive/c/XSBSYS/XSBENV/XSB/pthreads/pthreads -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+  loader_xsb.c will be built with: 		  gcc -mno-cygwin  -IC:\XSBSYS\XSBENV\jdk/include  -I/cygdrive/c/XSBSYS/XSBENV/jdk/include -IC:/XSBSYS/XSBENV/jdk/include/win32 -I/cygdrive/c/XSBSYS/XSBENV/XSB/pthreads/pthreads -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+  emuloop.c will be built with: 		  gcc -mno-cygwin  -IC:\XSBSYS\XSBENV\jdk/include  -I/cygdrive/c/XSBSYS/XSBENV/jdk/include -IC:/XSBSYS/XSBENV/jdk/include/win32 -I/cygdrive/c/XSBSYS/XSBENV/XSB/pthreads/pthreads -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+  tr_utils.c will be built with:		  gcc -mno-cygwin  -IC:\XSBSYS\XSBENV\jdk/include  -I/cygdrive/c/XSBSYS/XSBENV/jdk/include -IC:/XSBSYS/XSBENV/jdk/include/win32 -I/cygdrive/c/XSBSYS/XSBENV/XSB/pthreads/pthreads -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+  Loader flags: 				 -L/cygdrive/c/XSBSYS/XSBENV/XSB/pthreads/Pre-built/lib -L/cygdrive/c/cygwin/lib/w32api -lodbc32  -lpthreadVSE1 -lwsock32 -luser32
+  Compilation mode:				  optimal
+  XSB abstract machine: 			  multi-threading
+  XSB scheduling strategy:			  local
+  Garbage Collection Stress-Test:		  no
+  Jumptable-based emulator loop:		  yes
+  Demand support:                                 no
+
+  Support for modular database drivers: 	  no
+  -- These drivers can also be configured later.
+  Native support for Oracle:			  no
+  Support for the old ODBC driver:		  yes
+      ODBC_CFLAGS:                                
+
+  Java compiler:                                  C:\XSBSYS\XSBENV\jdk/bin/javac
+  Support for InterProlog's native engine:	  yes
+
+  POSIX regexp matching libraries:                yes
+  POSIX wildcard matching libraries:              yes
+
+  Curl support (HTTP protocol library):           no
+  XPath support:				  yes
+  XPath C flags:				   -I/cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/packages/xpath/cc/libxml -I/cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/packages/xpath/cc 
+  XPath loader flags:				   -L/cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/packages/xpath/cc/bin -lxml2 -lz -liconv -lm 
+
+  PCRE support (Perl pattern matching):           no
+
+
+make[1]: Entering directory `/cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/emu'
+
+Compiling XSB with gcc -mno-cygwin using -IC:\XSBSYS\XSBENV\jdk/include  -I/cygdrive/c/XSBSYS/XSBENV/jdk/include -IC:/XSBSYS/XSBENV/jdk/include/win32 -I/cygdrive/c/XSBSYS/XSBENV/XSB/pthreads/pthreads -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+
+	[gcc -mno-cygwin] main_xsb.c
+	[gcc -mno-cygwin] auxlry.c
+	[gcc -mno-cygwin] biassert.c
+	[gcc -mno-cygwin] builtin.c using -IC:\XSBSYS\XSBENV\jdk/include  -I/cygdrive/c/XSBSYS/XSBENV/jdk/include -IC:/XSBSYS/XSBENV/jdk/include/win32 -I/cygdrive/c/XSBSYS/XSBENV/XSB/pthreads/pthreads -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+	[gcc -mno-cygwin] cinterf.c
+	[gcc -mno-cygwin] conc_compl.c
+	[gcc -mno-cygwin] debug_xsb.c
+	[gcc -mno-cygwin] dis.c
+	[gcc -mno-cygwin] dynload.c
+	[gcc -mno-cygwin] dynamic_stack.c
+	[gcc -mno-cygwin] deadlock.c
+	[gcc -mno-cygwin] emuloop.c using -IC:\XSBSYS\XSBENV\jdk/include  -I/cygdrive/c/XSBSYS/XSBENV/jdk/include -IC:/XSBSYS/XSBENV/jdk/include/win32 -I/cygdrive/c/XSBSYS/XSBENV/XSB/pthreads/pthreads -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+	[gcc -mno-cygwin] error_xsb.c
+	[gcc -mno-cygwin] findall.c
+	[gcc -mno-cygwin] function.c
+	[gcc -mno-cygwin] hash_xsb.c
+	[gcc -mno-cygwin] hashtable_xsb.c
+	[gcc -mno-cygwin] heap_xsb.c
+	[gcc -mno-cygwin] init_xsb.c
+	[gcc -mno-cygwin] inst_xsb.c
+	[gcc -mno-cygwin] io_builtins_xsb.c
+	[gcc -mno-cygwin] loader_xsb.c using -IC:\XSBSYS\XSBENV\jdk/include  -I/cygdrive/c/XSBSYS/XSBENV/jdk/include -IC:/XSBSYS/XSBENV/jdk/include/win32 -I/cygdrive/c/XSBSYS/XSBENV/XSB/pthreads/pthreads -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+	[gcc -mno-cygwin] memory_xsb.c
+	[gcc -mno-cygwin] orient_xsb.c
+	[gcc -mno-cygwin] pathname_xsb.c
+	[gcc -mno-cygwin] psc_xsb.c
+	[gcc -mno-cygwin] random_xsb.c
+	[gcc -mno-cygwin] remove_unf.c
+	[gcc -mno-cygwin] residual.c
+	[gcc -mno-cygwin] rw_lock.c
+	[gcc -mno-cygwin] scc_xsb.c
+	[gcc -mno-cygwin] slgdelay.c
+	[gcc -mno-cygwin] socket_xsb.c
+	[gcc -mno-cygwin] string_xsb.c
+	[gcc -mno-cygwin] storage_xsb.c
+	[gcc -mno-cygwin] struct_manager.c
+	[gcc -mno-cygwin] struct_intern.c
+	[gcc -mno-cygwin] sub_delete.c
+	[gcc -mno-cygwin] subp.c
+	[gcc -mno-cygwin] system_xsb.c
+	[gcc -mno-cygwin] table_stats.c
+	[gcc -mno-cygwin] tables.c
+	[gcc -mno-cygwin] thread_xsb.c
+thread_xsb.c: In function `xsb_thread_request':
+thread_xsb.c:1128: warning: assignment makes pointer from integer without a cast
+thread_xsb.c:1699: warning: implicit declaration of function `gettimeofday'
+	[gcc -mno-cygwin] timer_xsb.c
+timer_xsb.c: In function `make_timed_call':
+timer_xsb.c:267: warning: passing arg 3 of `pthread_create' from incompatible pointer type
+	[gcc -mno-cygwin] token_xsb.c
+	[gcc -mno-cygwin] tr_utils.c using -IC:\XSBSYS\XSBENV\jdk/include  -I/cygdrive/c/XSBSYS/XSBENV/jdk/include -IC:/XSBSYS/XSBENV/jdk/include/win32 -I/cygdrive/c/XSBSYS/XSBENV/XSB/pthreads/pthreads -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+	[gcc -mno-cygwin] trace_xsb.c
+	[gcc -mno-cygwin] trie_lookup.c
+	[gcc -mno-cygwin] trie_search.c
+	[gcc -mno-cygwin] tries.c
+	[gcc -mno-cygwin] tst_insert.c
+	[gcc -mno-cygwin] tst_retrv.c
+	[gcc -mno-cygwin] tst_unify.c
+	[gcc -mno-cygwin] tst_utils.c
+	[gcc -mno-cygwin] varstring.c
+	[gcc -mno-cygwin] ubi_BinTree.c
+	[gcc -mno-cygwin] ubi_SplayTree.c
+	[gcc -mno-cygwin] hashtable.c
+	[gcc -mno-cygwin] hashtable_itr.c
+	[gcc -mno-cygwin] url_encode.c
+	[gcc -mno-cygwin] incr_xsb.c
+	[gcc -mno-cygwin] call_graph_xsb.c
+	[gcc -mno-cygwin] odbc_xsb.c
+	[gcc -mno-cygwin] interprolog_callback.c
+
+Making XSB executable /cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/config/i686-pc-cygwin-mt/bin/xsb 
+
+	[gcc -mno-cygwin] -o /cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/config/i686-pc-cygwin-mt/bin/xsb
+make[1]: Leaving directory `/cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/emu'
+make[1]: Entering directory `/cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/gpp'
+
+	[gcc -mno-cygwin] gpp.c using  -D WIN_NT
+	[gcc -mno-cygwin] -o gpp
+
+make[1]: Leaving directory `/cygdrive/c/XSBSYS/XSBDEV/XSBtest/XSB/gpp'
+
+

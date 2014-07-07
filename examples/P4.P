@@ -1,0 +1,3 @@
+:-auto_table.
+p(j):-tnot(p(k)).
+p(k):-p(n),p(q).

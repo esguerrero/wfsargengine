@@ -1,0 +1,11 @@
+:-auto_table.
+p(a):-p(b),ha(action1).
+p(c):-p(d),p(a),ha(action2).
+p(e):-tnot(p(f)),ha(action3).
+p(f):-tnot(p(e)),ha(action4).
+p(b).
+p(d).
+act(p(a),p(b),activ1).
+act(p(a),p(b),p(c),activ2).
+act(p(e),activ3).
+act(p(a),p(b),p(f),activ4).

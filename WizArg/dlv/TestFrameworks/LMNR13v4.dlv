@@ -1,0 +1,24 @@
+% Figure
+ar(fr6).
+ar(fr4).
+ar(fr5).
+ar(fr2).
+ar(fr3).
+ar(fr1).
+at(fr6,fr5).
+at(fr6,fr2).
+at(fr6,fr1).
+at(fr4,fr2).
+at(fr4,fr3).
+at(fr5,fr6).
+at(fr5,fr1).
+at(fr2,fr6).
+at(fr2,fr4).
+at(fr2,fr5).
+at(fr2,fr3).
+at(fr3,fr4).
+at(fr3,fr2).
+at(fr1,fr6).
+at(fr1,fr4).
+at(fr1,fr5).
+at(fr1,fr3).

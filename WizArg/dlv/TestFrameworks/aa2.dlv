@@ -1,0 +1,14 @@
+% Figure
+ar(e3).
+ar(e4).
+ar(e1).
+ar(e2).
+ar(e6).
+ar(e5).
+at(e4,e3).
+at(e1,e3).
+at(e1,e2).
+at(e2,e3).
+at(e2,e1).
+at(e6,e3).
+at(e5,e4).

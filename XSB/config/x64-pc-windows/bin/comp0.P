@@ -1,0 +1,5 @@
+p(a):-tnot(p(j)).
+p(a):-tnot(p(b)).
+p(b).
+p(c):-tnot(p(c)).
+p(i):-p(a),p(b),p(c).

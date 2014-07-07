@@ -1,0 +1,8 @@
+% Figure
+ar(jc).
+ar(d).
+ar(e).
+ar(c).
+at(d,e).
+at(e,c).
+at(c,d).

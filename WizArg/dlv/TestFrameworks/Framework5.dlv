@@ -1,0 +1,7 @@
+% Figure
+ ar(alpha).
+ ar(beta).
+
+
+ at(alpha,beta).
+ at(beta,alpha).

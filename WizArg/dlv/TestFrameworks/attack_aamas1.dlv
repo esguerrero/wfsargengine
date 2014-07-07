@@ -1,0 +1,13 @@
+% Figure
+ar(g10).
+ar(g7).
+ar(g6).
+ar(g5).
+ar(g4).
+at(g10,g5).
+at(g7,g6).
+at(g7,g5).
+at(g6,g7).
+at(g6,g5).
+at(g5,g10).
+at(g5,g4).

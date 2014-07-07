@@ -1,0 +1,5 @@
+% Figure
+ar(b).
+ar(a).
+at(a,b).
+at(a,a).

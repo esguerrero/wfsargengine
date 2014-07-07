@@ -1,0 +1,19 @@
+% Figure
+ar(arg5).
+ar(arg4).
+ar(arg3).
+ar(arg2).
+ar(arg1).
+ar(arg6).
+at(arg5,arg2).
+at(arg4,arg3).
+at(arg3,arg5).
+at(arg3,arg4).
+at(arg3,arg1).
+at(arg3,arg6).
+at(arg2,arg5).
+at(arg2,arg4).
+at(arg2,arg1).
+at(arg2,arg6).
+at(arg1,arg2).
+at(arg6,arg3).

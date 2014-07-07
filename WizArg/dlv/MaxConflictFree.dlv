@@ -1,0 +1,84 @@
+#const fixp = 30.
+#maxint= fixp.
+
+time(0..fixp).
+
+
+% Init
+arg(X,0) :- ar(X).
+ 
+
+% Calcula grounded
+% segundo argumento es para contar las iteraciones
+% Tercero, son iteraciones globales, time
+%
+
+a_gr(X,0,T1) :- T1=T+1, ac(X,T).
+
+a_gr(X,0,T1) :- arg(X,T), T1=T+1, not not_a_gr(X,T).
+
+not_a_gr(X,T) :- arg(X,T), at(Y,X), not d(Y,T), time(T).
+
+a_gr(X,N,T):- #int(N), N >0, arg(X,T), not not_a_gr_d(X,N,T), time(T).
+
+not_a_gr_d(X,N,T) :- at(Y,X), N=M+1, not atacado(Y,M,T),arg(X,T), arg(Y,T), time(T).
+
+atacado(Y,M,T):- arg(Y,T), arg(Z,T), at(Z,Y), a_gr(Z,M,T), time(T).
+
+
+% Predicado principal de grounded
+
+ac_gr(X,T) :- a_gr(X, fixp,T), time(T).
+
+d_gr(X,T) :- at(Y,X), ac_gr(Y,T), arg(Y,T), arg(X,T), time(T).
+
+i_gr(X,T):- arg(X,T), not ac_gr(X,T), not d_gr(X,T), time(T).
+
+at_d(X,Y,T) :- arg(X,T), arg(Y,T), at(X,Y), not not_at_d(X,Y,T), time(T).
+
+not_at_d(X,Y,T) :- arg(X,T), arg(Y,T), at(X,Y), d_gr(X,t), time(T).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Argumentos base
+
+base(X,T) v otro_base(X,T) :- i_gr(X,T), time(T).
+
+:- base(X,T), base(Y,T), X != Y, not ciclo(X,Y,T), time(T).
+:- base(X,T), ar(Y), X != Y, otro_base(Y,T), ciclo(X,Y,T).
+:-  not_base(T), time(T).
+:- incompleto(T), time(T).
+
+incompleto(T) :- i_gr(X,T), not not_vacio(T), time(T).
+not_vacio(T) :- base(X,T), time(T). 
+
+not_base(T) :- base(X,T), arg(Y,T), otro_base(Y,T), at(Y,X), time(T).
+
+ciclo(X,Y,T) :- camino(X,Y,T), camino(Y,X,T), time(T).
+camino(X,Y,T) :- at(X,Y), arg(X,T), arg(Y,T), time(T).
+camino(X,Y,T) :- arg(X,T), arg(Y,T), arg(Z,T), at(X,Z), camino(Z,Y,T), time(T).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ac(X,T1) :- T1=T+1, ac(X,T), time(T1).
+d(X,T1) :- T1=T+1, d(X,T), time(T1).
+
+ac(X,T) :- ac_gr(X,T), time(T).
+d(X,T) :- d_gr(X,T), time(T).
+d(X,T) :- ac(Y,T), at(Y,X), time(T).
+
+ac(X,T) :- base(X,T), not d(X,T), time(T). 
+d(X,T) :- at(Y,X), base(X,T), base(Y,T), ac(Y,T), time(T).
+d(X,T) v d(Y,T) :- at(Y,X), camino_d(X,Y,T), base(X,T), base(Y,T), time(T).
+camino_d(X,Y,T) :- at(X,Y), base(X,T), base(Y,T), time(T).
+camino_d(X,Y,T) :- at(X,Z), base(X,T), base(Y,T), base(Z,T), camino_d(Z,Y,T), time(T).
+
+%%%%%%%%%%
+
+arg(X,T1) :- ar(X), T1=T+1, not ac(X,T), not d(X,T), time(T), time(T1).
+
+%%%%%%%%%%%%%%%%%%%%%
+
+
+IN(X) :- ac(X,fixp).
+OUT(X) :- d(X,T).
+attacked(X) :- at(Y,X), acepta(Y).

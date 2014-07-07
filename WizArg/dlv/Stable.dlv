@@ -1,0 +1,4 @@
+acc(X) :- ar(X), not def(X).
+def(X) :- ar(X), ar(Y), at(Y,X) , acc(Y).
+IN(X) :- acc(X).
+OUT(X) :- def(X).

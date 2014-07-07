@@ -1,0 +1,7 @@
+:-auto_table.
+p(a):-p(b).
+p(c):-p(d),p(a).
+p(e):-tnot(p(f)).
+p(f):-tnot(p(e)).
+p(b).
+p(d).
